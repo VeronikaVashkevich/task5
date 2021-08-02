@@ -82,6 +82,7 @@ function placeDiv(xPos, yPos) {
 input.addEventListener('change', function () { input_text() });
 
 function input_text(){
+    context.font = "20px monospace";
     context.fillText(input.value, xPos, yPos);
     input.style.display = 'none';
     is_writing = false;
