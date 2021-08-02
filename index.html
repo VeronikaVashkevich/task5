@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Drawing app</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.css" rel="stylesheet" >
+</head>
+<body>
+
+<div class="main-container" >
+    <div class="app">
+        <div class="editable-text" contenteditable="true"></div>
+        <div class="toolbar">
+            <input type="color" oninput="draw_color = this.value" class="tool-icon" id="color-picker">
+            <input type="range" min="1" max="100" class="pen-size" oninput="draw_width = this.value">
+            <img src="images/pen.png" alt="pen" class="tool-icon pen" id="penTool">
+            <img src="images/eraser.png" alt="eraser" class="tool-icon" id="eraserTool" onclick="draw_color = 'white'">
+            <img src="images/text.png" alt="text" class="tool-icon" id="textTool">
+            <img src="images/clear.png" alt="clear" class="tool-icon" id="clearTool">
+        </div>
+        <div class="canvas">
+            <canvas id="canvas"> </canvas>
+        </div>
+        <input type="text" class="text">
+    </div>
+</div>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
